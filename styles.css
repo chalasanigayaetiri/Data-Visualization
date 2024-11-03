@@ -1,0 +1,76 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-title {
+  margin: 0;
+}
+
+.header-nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-select,
+.selector {
+  background-color: #555;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+button{
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #555;
+  color: #fff;
+  margin-left: 40px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.graph-container {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.top-row .graph-container {
+  padding-top: 80px; /* Add padding only to top row graphs */
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  clear: both;
+  padding-top: 20px;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

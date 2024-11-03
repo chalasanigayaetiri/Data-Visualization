@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Weather Data Dashboard</h1>
+        <nav class="header-nav">
+            <select id="city-select" class="nav-select">
+                <option value="Bangalore">Bangalore</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Las Vegas">Las Vegas</option>
+                <option value="Miami">Miami</option>
+                <option value="Toronto">Toronto</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Nashville">Nashville</option>
+                <option value="New York">New York</option>
+            </select>
+            <!-- Button to redirect to radarChart.html -->
+            <button onclick="redirectToRadarChart()">Radar Chart</button>
+        </nav>
+    </header>
+    <div class="top-row">
+        <div class="graph-container">
+            <canvas id="line-chart"></canvas>
+        </div>
+        <div class="graph-container">
+            <canvas id="bar-chart"></canvas>
+        </div>
+    </div>
+    <div class="bottom-row">
+        <div class="graph-container">
+            <canvas id="stacked-area-chart"></canvas>
+        </div>
+        <div class="graph-container">
+            <canvas id="scatter-chart"></canvas>
+        </div>
+    </div>
+    <footer>
+        <div id="map"></div>
+    </footer>
+    <script src="lineChart.js"></script>
+    <script src="barChart.js"></script>
+    <script src="stackedAreaChart.js"></script>
+    <script src="scatterChart.js"></script>
+    <script src="map.js"></script>
+    <script>
+        function redirectToRadarChart() {
+            window.location.href = 'radarChart.html';
+        }
+    </script>
+</body>
+</html>
